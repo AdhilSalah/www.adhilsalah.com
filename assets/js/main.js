@@ -257,12 +257,12 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxFPS63D1Mf_c0lQDQYKdo94bexbOs2zwmAxwK4jzs1TUHJepyyER2hCZToOWcxl77o/exec'
 			const form = document.forms['gform']
 		  
-			form.addEventListener('submit', e => {
-			  e.preventDefault()
-			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			      form.addEventListener('submit', e => {
+			         e.preventDefault()
+			         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 				.then(response => console.log('Success!', response))
 				.catch(error => console.error('Error!', error.message))
-        alert('Your Message Has Been Sent');
+                                 alert('Your Message Has Been Sent');
         
 			})
 
